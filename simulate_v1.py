@@ -32,13 +32,13 @@ def simulate(lamda, mu, tempsMax):
             w+=1
 
         else:
-
+            ct = t_arrival
             if len(depart)>0:
                 depart.pop(0)
                 if n>0 :n+=-1
                 if w > 0 : w-=1
         cm.append(n + w)
-        ct = t_arrival
+
 
 
 
