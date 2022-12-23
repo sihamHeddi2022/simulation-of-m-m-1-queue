@@ -43,8 +43,8 @@ def simulate(lamda, mu, tempsMax):
 
             depart[0].append(depart_t)
             if ans:
-                if t_arrival < depart[0][0]:
-                    ct = depart[0][0]
+                if t_arrival < depart[0][len(depart[0]) - 1]:
+                    ct = depart[0][len(depart[0]) - 1]
                     waiting[0].append(depart[0][len(depart[0]) - 1] - t_arrival)
                     w1 += 1
 
@@ -58,9 +58,9 @@ def simulate(lamda, mu, tempsMax):
         else:
             depart[1].append(depart_t)
             if ans:
-                if t_arrival < depart[1][0]:
-                    ct = depart[1][0]
-                    waiting[1].append(depart[0][len(depart[0]) - 1] - t_arrival)
+                if t_arrival < depart[1][len(depart[1]) - 1]:
+                    ct = depart[1][len(depart[1]) - 1]
+                    waiting[1].append(depart[1][len(depart[1]) - 1] - t_arrival)
                     W2 += 1
                 else:
                     ct = t_arrival
