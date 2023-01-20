@@ -10,12 +10,18 @@ def expo(p):
 def simulate(lamda, mu, tempsMax):
 
     #examples = []
+
     inter_arrival = expo(lamda)
     ct = inter_arrival
+
     t_arrival = ct
+
     depart_t = 0
+
     waiting = []
+
     nb = {}
+
     while ct < tempsMax:
 
         nb[inter_arrival] = inter_arrival/tempsMax
